@@ -46,7 +46,8 @@ router.get("/sinceId", function(request, response) {
        maxId: 0,
        error: 'no tag'
     }
-    response.end(JSON.stringify(result));
+    // response.end(JSON.stringify(result));
+    response.end(result.length + " ; " + result.maxId);
   }
 });
 
