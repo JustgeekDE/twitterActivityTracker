@@ -71,4 +71,4 @@ function getOAuth(done){
   });
 };
 
-http.createServer(router).listen(1187);
+http.createServer(router).listen(process.env.PORT || 1187);
