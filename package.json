@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "description": "a search engine for twitter hash tags",
   "scripts": {
-    "start": "nodejs server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/twluna/fake-machine.git"
+    "url": "https://github.com/JustgeekDE/twitterActivityTracker.git"
   },
   "dependencies": {
     "basic-auth": "^1.0.0",
