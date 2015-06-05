@@ -3,9 +3,13 @@ var router = require('node-simple-router')({list_dir: false});
 var url = require('url') ;
 
 var Twit = require('twit')
-var config = require('./config.js')
 
-var T = new Twit(config.twitter)
+var T = new Twit({
+    consumer_key:         process.env.TWITTER_CONSUMER_KEY
+  , consumer_secret:      process.env.TWITTER_CONSUMER_SECRET
+  , access_token:         process.env.TWITTER_ACCESS_TOKEN
+  , access_token_secret:  process.env.TWITTER_ACCESS_TOKEN_SECRET
+})
 
 router.get("/hello", function(request, response) {response.end("Hello, World!");});
 router.get("/sinceId", function(request, response) {
