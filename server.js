@@ -37,7 +37,8 @@ router.get("/sinceId", function(request, response) {
         length: data['statuses'].length,
          maxId: data['search_metadata']['max_id']
       }
-      response.end(JSON.stringify(result));
+      // response.end(JSON.stringify(result));
+      response.end(result.length + " ; " + result.maxId);
       // console.log(data)
     });
   } else {
