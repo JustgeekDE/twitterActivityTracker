@@ -38,7 +38,7 @@ router.get("/sinceId", function(request, response) {
          maxId: data['search_metadata']['max_id']
       }
       // response.end(JSON.stringify(result));
-      response.end(result.length + " ; " + result.maxId);
+      response.end("results: " + result.length + "\nmaxId: " + result.maxId);
       // console.log(data)
     });
   } else {
@@ -48,7 +48,7 @@ router.get("/sinceId", function(request, response) {
        error: 'no tag'
     }
     // response.end(JSON.stringify(result));
-    response.end(result.length + " ; " + result.maxId);
+    response.end("results: " + result.length + "\nmaxId: " + result.maxId);
   }
 });
 
